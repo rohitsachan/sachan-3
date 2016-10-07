@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQ1</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+
+</head>
+<body>
+<div>
+	<p id="p1">lorem ipsum bgfb kgifrb buygfwerfb fgwfb</p>
+</div>
+
+
+
+
+	<div id="div99" align="center"></div>
+
+
+<button id="hide">Hide</button>
+<button id="show">show</button>
+<!-- <button id="toggle">Toggle</button> --> <br>
+<button id="fadein"> Fade in</button>
+<button id="fadeinslow">Fade in slow</button>
+<button id="fadeintimer">Fade in Timer</button> <br>
+<button id="fadeout">Fade out</button>
+<button id="fadeoutslow">Fade out slow</button>
+<button id="fadeouttimer">Fade out Timer</button> <br>
+<button id="fadetoggle">Fade Toggle</button>
+<button id="fadetoggleslow">Fade Toggle Slow</button>
+<button id="fadetoggletimer">Fade Toggle Timer</button> <br>
+<button id="writes" onclick="writes()">writes</button>
+
+
+
+			<!-- Script Section -->
+			
+<script src="jquery-3.1.1.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script>
+	function writes() {
+		document.write("color:mediumblue">"Hello World!");
+		document.writeln("color:mediumblue">"Have a nice day!");
+		document.writeln("Helllllo");
+	}
+	
+</script>
+
+<script type="text/javascript">
+	// $(document).ready(function () {
+	// 	alert('Hello')
+	// });
+// OR
+	// $(function () {
+	// 	alert('Hello')
+	// });
+
+	$(function () {
+		$("#show").click(function () {
+			$("p").show();
+		});
+
+		$("#hide").click(function () {
+			$("p").hide();
+		});
+
+		// $("#toggle").click(function () {
+		// 	$("p").Toggle();
+		// });
+
+		$("#fadein").click(function () {
+			$("#p1").fadeIn();
+		});
+
+		$("#fadeinslow").click(function () {
+			$("#p1").fadeIn("slow");
+		});
+
+		$("#fadeintimer").click(function () {
+			$("#p1").fadeIn(3000);
+		});
+
+		$("#fadeout").click(function () {
+			$("#p1").fadeOut();
+		});
+
+		$("#fadeoutslow").click(function () {
+			$("#p1").fadeOut("slow");
+		});
+
+		$("#fadeouttimer").click(function () {
+			$("#p1").fadeOut(3000);
+		});
+
+		$("#fadetoggle").click(function () {
+			$("#p1").fadeToggle(function () {
+				confirm("Do u wnat to continue...(funny)");
+			});
+		});
+
+		$("#fadetoggleslow").click(function () {
+			$("#p1").fadeToggle("slow", function () {
+				prompt("fadetoggleslow invoked", "Enter something");
+				document.getElementById("div99").innerHTML = "This is a prompt message!";
+			});
+		});
+
+		$("#fadetoggletimer").click(function () {
+			$("#p1").fadeToggle(3000, function () {
+				alert("Hello fadetoggletimer invoked")
+			});
+		});
+
+
+		
+
+	});
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
